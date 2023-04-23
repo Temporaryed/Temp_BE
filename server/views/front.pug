@@ -9,7 +9,7 @@ head
                 // Modal Header
                 .modal-header
                     button.close(type="button", data-dismiss="modal")
-                        span(aria-hidden="true") ×
+                        span(aria-hidden="true", onclick="location.href='/'") ×
                         span.sr-only Close
                     h4#myModalLabel.modal-title
                         | Edit Resource
@@ -24,11 +24,11 @@ head
                             label(for='PW') Email:
                             input#PW.form-control(type='password', placeholder='password' name='PW')
                         button.btn.btn-primary(type="submit", name="asdf") Submit
-                        button.btn.btn-default(type="button", data-dismiss="modal")
+                        button.btn.btn-default(type="button", data-dismiss="modal", onclick="location.href='/'")
                             | Close
                 // Modal Footer
                 .modal-footer
-                    h4 footer
+                    a(href='/') Return to Index
 
         // footer
         p.foot.text-xs-center test
