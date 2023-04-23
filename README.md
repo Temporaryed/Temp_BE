@@ -26,3 +26,5 @@
 > - [Mysql](https://www.npmjs.com/package/mysql) is a node.js driver for mysql. It is written in JavaScript, <br>does not require compiling, and is 100% MIT licensed.
 > - #### Page Navigation - by pug
 >   - html 태그의 다른 표현 방식일 뿐 동일 구조 속성명 일치. 익숙할 경우 효율성 향상 기대
+> - #### Mysql Connection 
+>   - 너무 [스파게티 코드](https://github.com/nn98/Solved.SKHU/blob/main/server/server.js)여서 그렇지 개별 코드 상태는 괜찮았던듯
