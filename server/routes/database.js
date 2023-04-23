@@ -1,3 +1,5 @@
+var express = require('express');
+var router = express.Router();
 var mysql = require('mysql');
 
 var connection = mysql.createPool({
@@ -16,3 +18,5 @@ connection.getConnection((err) => {
     }
     console.log('connecting');
 });
+
+module.exports = router;
