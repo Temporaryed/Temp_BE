@@ -24,3 +24,5 @@
 > #### Nodemon
 > - [Nodemon](https://www.npmjs.com/package/nodemon) is a tool that helps develop Node.js based applications <br>by automatically restarting the node application when file changes in the directory are detected.
 > - [Mysql](https://www.npmjs.com/package/mysql) is a node.js driver for mysql. It is written in JavaScript, <br>does not require compiling, and is 100% MIT licensed.
+> - #### Page Navigation - by pug
+>   - html 태그의 다른 표현 방식일 뿐 동일 구조 속성명 일치. 익숙할 경우 효율성 향상 기대
