@@ -61,3 +61,5 @@
 > - MySQL client for Node.js with focus on performance. Supports prepared statements, <br>non-utf8 encodings, binary log
     protocol, compression, ssl
 > #### [Npm i Options](https://docs.npmjs.com/cli/v9/commands/npm-install)
+> #### 기본 DB 연결
+> - [Sequelize 예제](https://thebook.io/080334/0363/) 참고
