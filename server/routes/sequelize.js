@@ -4,7 +4,7 @@ var path = require('path');
 var morgan = require('morgan');
 var nunjucks = require('nunjucks');
 
-var context = '\tSequelize:\t'
+var context = 'Sequelize'
 var paths = {
     defaultPath: '/',
 }
@@ -13,15 +13,9 @@ var logMsg = {
     callBack: 'is callback'
 }
 
-const { sequelize } = require('../models');
+const {sequelize} = require('../models');
 
-// router.set('port', process.env.PORT || 3001);
-// router.set('view engine', 'pug');
-// nunjucks.configure('views', {
-//     express: router,
-//     watch: true,
-// });
-sequelize.sync({ force: false })
+sequelize.sync({force: false})
     .then(() => {
         console.log('데이터베이스 연결 성공');
     })
@@ -32,7 +26,28 @@ sequelize.sync({ force: false })
 router.use(morgan('dev'));
 router.use(express.static(path.join(__dirname, 'public')));
 router.use(express.json());
-router.use(express.urlencoded({ extended: false }));
+router.use(express.urlencoded({extended: false}));
+
+router.get(paths.defaultPath, (req, res) => {
+
+    var path = paths.defaultPath
+    console.log(`\t${context}:\t${path} is ${logMsg.called}`)
+
+    res.render('sequelize', {title: 'Sequelize', currentURL: path+context});
+
+    console.log(`\t${context}:\t${path} is ${logMsg.callBack}`)
+
+});
+
+module.exports = router;
+
+
+// router.set('port', process.env.PORT || 3001);
+// router.set('view engine', 'pug');
+// nunjucks.configure('views', {
+//     express: router,
+//     watch: true,
+// });
 
 // router.use((req, res, next) => {
 //     const error =  new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
@@ -47,15 +62,6 @@ router.use(express.urlencoded({ extended: false }));
 //     res.render('error');
 // });
 
-router.get(paths.defaultPath, (req, res) => {
-
-    var path = paths.defaultPath
-    console.log(context, path, logMsg.called);
-
-});
-
 // router.listen(router.get('port'), () => {
 //     console.log(router.get('port'), '번 포트에서 대기 중');
 // });
-
-module.exports = router;
