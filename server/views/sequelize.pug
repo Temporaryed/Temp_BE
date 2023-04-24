@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    h1= title
+    script(type='text/javascript').
+        foo = true;
+        bar = function () {
+        };
+        if (foo) {
+            bar(1 + 5)
+        }
+
+    p Welcome to #{title}
+
+    a(href='/') Return to index
+
+    p
+
+    #container.col
+        form(role='form' method='GET' action='#{currentURL}')
+            div.form-group
+                label(for='ID') Name:
+                input#ID.form-control(type='text', placeholder='exam@email.com' name='ID')
+
+            p
+
+            div.form-group
+                label(for='PW') Email:
+                input#PW.form-control(type='password', placeholder='password' name='PW')
+
+            p
+
+            button.btn.btn-primary(type="submit", name="submitBtn") Submit
+            span &nbsp;&nbsp;
+            button.btn.btn-default(type="button", data-dismiss="modal")
+                | Close
+

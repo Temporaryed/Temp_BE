@@ -16,14 +16,14 @@ head
                 // Modal Body
                 .modal-body
                     //#editForm.form(role='form' method='GET' action='https://www.google.com/')
-                    form(role='form' method='GET' action='/')
+                    form(role='form' method='GET' action='#{currentURL}')
                         div.form-group
                             label(for='ID') Name:
                             input#ID.form-control(type='text', placeholder='exam@email.com' name='ID')
                         div.form-group
                             label(for='PW') Email:
                             input#PW.form-control(type='password', placeholder='password' name='PW')
-                        button.btn.btn-primary(type="submit", name="asdf") Submit
+                        button.btn.btn-primary(type="submit", name="submitBtn") Submit
                         button.btn.btn-default(type="button", data-dismiss="modal", onclick="location.href='/'")
                             | Close
                 // Modal Footer
