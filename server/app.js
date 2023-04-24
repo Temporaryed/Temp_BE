@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var frontRouter = require('./routes/front')
 var databaseRouter = require('./routes/database')
+var sequelizeRouter = require('./routes/sequelize')
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/front', frontRouter);
 app.use('/database', databaseRouter);
+app.use('/sequelize', sequelizeRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
