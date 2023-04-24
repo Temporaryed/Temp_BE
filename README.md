@@ -16,21 +16,13 @@
 > - [pug - 즉시 업뎃 / js 재시작 필요](#nodemon)
 > ### 정리
 > - 모듈
-    >
-
-- Node 모듈 생성해서 활용
-
+> - Node 모듈 생성해서 활용
 > - 리액트 앱 만들듯이 기본적인 세팅해줌
-    >
-- 앱/라우터/뷰 세팅에 뷰는 [pug 템플릿 엔진](https://pugjs.org/api/getting-started.html)
+> - 앱/라우터/뷰 세팅에 뷰는 [pug 템플릿 엔진](https://pugjs.org/api/getting-started.html)
 > - PUG 템플릿 엔진
-    >
-
-- [pug 문법 참고](https://jeong-pro.tistory.com/65)
-
+> - [pug 문법 참고](https://jeong-pro.tistory.com/65)
 > - [생성 사이트](https://codepen.io/dpetrini/pen/yPMeBg) - 입력페이지 참고
-    >
-- 간결하고 효율적이라고 하는데 문법이 익숙하진 않다보니 연습하는 느낌으로
+> - 간결하고 효율적이라고 하는데 문법이 익숙하진 않다보니 연습하는 느낌으로
 > * * *
 > ### 2023-04-23
 > #### [Nodemon](https://www.npmjs.com/package/nodemon)
@@ -63,3 +55,12 @@
 > #### [Npm i Options](https://docs.npmjs.com/cli/v9/commands/npm-install)
 > #### 기본 DB 연결
 > - [Sequelize 예제](https://thebook.io/080334/0363/) 참고
+> #### 호출/콜백 로깅 by `
+> - `ChatGPT`: JavaScript에서 문자열 템플릿을 만들기 위해 백틱()을 사용할 수 있습니다. <br>백틱 내부에서 ${변수}`와 같이 변수를 사용할 수 있으며, 이를 서식문자라고 합니다.
+> #### PUG 템플릿에서 현재 URL
+> - 기존 JS window.location.href 안먹히는듯?
+> - 렌더링시 currentURL 전송해서
+    사용하도록 [침고](https://stackoverflow.com/questions/60125193/how-to-make-the-window-object-available-to-pug)
+>
+> ### 정리
+> - context, path, logMessage 등 상수값 선언해서 사용, 각 라우터에서 동일 코드 재활용
